@@ -1,0 +1,50 @@
+[
+    {
+        "role": "user",
+        "content": "What do you know"
+    },
+    {
+        "role": "assistant",
+        "content": "I don't have any specific knowledge or information based on the given context. Is there something specific you would like to know or discuss?"
+    },
+    {
+        "role": "user",
+        "content": "Hi"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "What formulas do you have"
+    },
+    {
+        "role": "assistant",
+        "content": "The formulas provided in the given context are:\n\n1. n \u2265 (m\u00d7g)/(2\u00d7 sin(\u03b1)\u00d7 Ft)\u00d7 (Cy\u00d7h/w-Cz)\u00d7fs\n2. n \u2265(m\u00d7g)/(2\u00d7 sin( \u03b1)\u00d7 Ft)\u00d7 (Cx\u00d7h/w-Cz)\u00d7fs\n3. n \u2265 ((Cxy - \u03bc \u00d7 Cz)\u00d7m\u00d7g)/(2 \u00d7 \u03bc \u00d7 sin(\u03b1)\u00d7 Ft)\u00d7 fs\n4. n \u2265 (m\u00d7g\u00d7 (Cx\u00d7h-Cz\u00d71))/(2\u00d7 sin(\u03b1) \u00d7 Ft\u00d71)\u00d7fs"
+    },
+    {
+        "role": "user",
+        "content": "hola soy muy buena persona"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm sorry, but I cannot provide a response to the query \"hola soy muy buena persona\" based on the given context information."
+    },
+    {
+        "role": "user",
+        "content": "que dice el v\u00eddeo"
+    },
+    {
+        "role": "assistant",
+        "content": "No puedo proporcionar una respuesta a la consulta \"que dice el v\u00eddeo\" bas\u00e1ndome en la informaci\u00f3n de contexto proporcionada."
+    },
+    {
+        "role": "user",
+        "content": "Cu\u00e9ntame de qu\u00e9 trata el v\u00eddeo"
+    },
+    {
+        "role": "assistant",
+        "content": "Lo siento, pero no puedo proporcionar una respuesta a la consulta \"Cu\u00e9ntame de qu\u00e9 trata el v\u00eddeo\" bas\u00e1ndome en la informaci\u00f3n de contexto proporcionada."
+    }
+]
