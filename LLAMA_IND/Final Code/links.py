@@ -11,7 +11,7 @@ def create_link_text(id):
         outx = (i['text'])
         outl.append(outx)
 
-        with open("fails/op.txt", "a") as opf:
+        with open("data/op.txt", "a") as opf:
             opf.write(outx + "\n")
 
 
@@ -33,15 +33,15 @@ def get_vid_id(url):
 
 
 
-# url = input("Enter Video Link: ")
-# id = get_vid_id(url)
-#
-# if url:
-#     print("Video ID:", id)
-# else:
-#     print("Video ID not found.")
-#
-# create_link_text(id)
+url = input("Enter Video Link: ")
+id = get_vid_id(url)
+
+if url:
+    print("Video ID:", id)
+else:
+    print("Video ID not found.")
+
+create_link_text(id)
 
 # documents = SimpleDirectoryReader('./data').load_data()
 # index = GPTVectorStoreIndex(documents)
