@@ -11,7 +11,7 @@ def create_link_text(id):
         outx = (i['text'])
         outl.append(outx)
 
-        with open("data/op.txt", "a") as opf:
+        with open("fails/op.txt", "a") as opf:
             opf.write(outx + "\n")
 
 

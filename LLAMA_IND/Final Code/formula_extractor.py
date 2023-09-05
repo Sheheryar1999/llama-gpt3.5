@@ -50,14 +50,14 @@ def remove_duplicate_lines(input_file, output_file):
 
 def main():
     pdf_path = ('./training_data/text3.pdf')
-    output_file = 'data/extracted_formulas.txt'
+    output_file = 'eq_dir/extracted_formulas.txt'
 
     extracted_formulas = extract_formulas_from_pdf(pdf_path)
 
     if extracted_formulas:
         save_formulas_to_txt(extracted_formulas, output_file)
         print(f"Formulas extracted and saved to {output_file}")
-        remove_duplicate_lines('data/extracted_formulas.txt', 'data/extracted_formulas.txt')
+        remove_duplicate_lines('eq_dir/extracted_formulas.txt', 'eq_dir/extracted_formulas.txt')
 
     else:
         print("No formulas found in the PDF.")
