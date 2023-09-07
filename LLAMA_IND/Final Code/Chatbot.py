@@ -35,7 +35,7 @@ class Chatbot:
 
 
 
-documents = SimpleDirectoryReader('./data').load_data()
+documents = SimpleDirectoryReader('data/text/').load_data()
 index = GPTVectorStoreIndex(documents)
 
 
