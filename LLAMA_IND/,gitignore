@@ -1,3 +1,7 @@
 #ignore .env
 
 .env
+
+#ignore json
+
+.json
