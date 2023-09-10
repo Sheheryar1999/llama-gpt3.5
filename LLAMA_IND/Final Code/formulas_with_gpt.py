@@ -42,7 +42,7 @@ index = GPTVectorStoreIndex(documents)
 display_text_file_contents(path)
 
 user_input = input("Enter Number: ")
-query = f"Give me a comma separated list of variables required in formula {user_input}, excluding the left hand side variables"
+query = f"Create comma separated list of parameters required in formula {user_input}, Do not include left hand side of the equation"
 engine = index.as_query_engine()
 response = engine.query(query)
 
@@ -54,7 +54,7 @@ values = response.response
 # print( type(values))
 print(values)
 
-parameter_names = values.split(", ")
+parameter_names = values.split(",")
 parameter_values = {}
 
 for parameter in parameter_names:
@@ -62,9 +62,9 @@ for parameter in parameter_names:
         value = input(f"Please provide the value of {parameter}: ")
         if value.strip() == "":
             print("No value provided. Try again.")
-        elif(value.strip() == "α"):
-            val_deg = float(value)
-            value = math.radians(val_deg)
+        # elif(value.strip() == "α"):
+        #     val_deg = float(value)
+        #     value = math.radians(val_deg)
         else:
             parameter_values[parameter] = value
             break
@@ -74,7 +74,7 @@ print("Gathered Parameter Values:")
 for parameter, value in parameter_values.items():
     print(f"{parameter}: {value}")
 
-query = f" for formula {user_input}, using the values {parameter_values} to calculate the value, show your working"
+query = f" for formula {user_input}, using the values {parameter_values} to calculate the value"
 engine = index.as_query_engine()
 response = engine.query(query)
 print(response)
