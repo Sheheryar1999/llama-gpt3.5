@@ -1,4 +1,5 @@
 from llama_index import SimpleDirectoryReader, GPTVectorStoreIndex
+import sympy as sp
 import keys
 keys.key_setting()
 import math
@@ -33,6 +34,16 @@ def prompt_user_for_parameters(parameters):
 
     return user_values
 
+def evaluate_expression(expression):
+    # Define a symbol for 'n'
+    n = sp.symbols('n')
+
+    # Parse the expression string
+    expression = sp.parse_expr(expression)
+
+    # Evaluate the expression
+    result = sp.N(expression)
+    return result
 path = "eq_dir/extracted_formulas.txt"
 # save_path_var = "variables.txt"
 documents = SimpleDirectoryReader('./eq_dir').load_data()
@@ -42,7 +53,7 @@ index = GPTVectorStoreIndex(documents)
 display_text_file_contents(path)
 
 user_input = input("Enter Number: ")
-query = f"Create comma separated list of parameters required in formula {user_input}, Do not include left hand side of the equation"
+query = f"Create comma separated list of parameters required in formula {user_input}, ignore the left hand side of the equation. Make sure to not skip any values"
 engine = index.as_query_engine()
 response = engine.query(query)
 
@@ -74,7 +85,10 @@ print("Gathered Parameter Values:")
 for parameter, value in parameter_values.items():
     print(f"{parameter}: {value}")
 
-query = f" for formula {user_input}, using the values {parameter_values} to calculate the value"
+query = f" for formula {user_input}, use the values {parameter_values} to generate an expression for Sympy, make sure to ignore the left hand side of the equation. Your reply must only have the expression and nothing else"
 engine = index.as_query_engine()
 response = engine.query(query)
-print(response)
+
+print("Gathered Expression: ", response.response)
+
+print("Answer: ", evaluate_expression(response.response))

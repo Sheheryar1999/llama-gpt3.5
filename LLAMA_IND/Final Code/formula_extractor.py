@@ -49,7 +49,7 @@ def remove_duplicate_lines(input_file, output_file):
             outfile.write(line + '\n')
 
 def main():
-    pdf_path = ('./training_data/text3.pdf')
+    pdf_path = 'D:/git-repos/llama-gpt3.5/training_data/text3.pdf'
     output_file = 'eq_dir/extracted_formulas.txt'
 
     extracted_formulas = extract_formulas_from_pdf(pdf_path)

@@ -70,5 +70,13 @@
     {
         "role": "assistant",
         "content": "I'm sorry, but I couldn't find any information about \"algea ecosystems\" in the given context."
+    },
+    {
+        "role": "user",
+        "content": "hi"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
     }
 ]
